@@ -7,7 +7,7 @@ const logger = require("../data/middleware/logger");
 
 // Routers
 const searchRouter = require("../data/routes/searchRouter");
-const favoritesRouter = require("../data/routes/favoritesRouter");
+const favoritesRouter = require("../data/routes/filmsRouter");
 
 const server = express();
 server.use(helmet());
