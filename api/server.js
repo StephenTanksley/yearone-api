@@ -1,15 +1,16 @@
+// Server setup
 const express = require("express");
-const helmet = require("helmet");
-const cors = require("cors");
+const server = express();
 
 // Middleware
+const helmet = require("helmet");
+const cors = require("cors");
 const logger = require("../data/middleware/logger");
 
 // Routers
 const searchRouter = require("../data/routes/searchRouter");
 const favoritesRouter = require("../data/routes/filmsRouter");
 
-const server = express();
 server.use(helmet());
 server.use(cors());
 server.use(logger("long"));
@@ -18,7 +19,7 @@ server.use(express.json());
 server.use("/search", searchRouter);
 
 server.get("/", (req, res, next) => {
-  res.json({
+  res.status(200).json({
     message: "Year One API",
   });
 });
