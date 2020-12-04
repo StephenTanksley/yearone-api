@@ -7,12 +7,11 @@ module.exports = (type) => (req, res, next) => {
         ${req.method}\n
         ${req.url}\n
         ${utcTime}\n
-        ${req.ip}\n   
-        ${req.params}     
+        ${req.ip}\n      
         `);
     next();
   } else {
     console.log(req);
-    return;
+    next();
   }
 };
