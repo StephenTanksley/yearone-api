@@ -3,6 +3,9 @@ exports.up = async function (knex) {
     table.increments("id").primary();
     table.string("title").notNullable();
     table.string("imdb_id").unique();
+    table.string("image_url");
+    table.integer("thumbs_up");
+    table.integer("thumbs_down");
   });
 };
 
