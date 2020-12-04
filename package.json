@@ -1,0 +1,36 @@
+{
+  "name": "yearone-api",
+  "version": "1.0.0",
+  "description": "This is an API created to fulfill the requirements for YearOne's API design take home assignment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cross-env DB_ENV=dev nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenTanksley/yearone-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephenTanksley/yearone-api/issues"
+  },
+  "homepage": "https://github.com/StephenTanksley/yearone-api#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "knex": "^0.21.12",
+    "knex-cleaner": "^1.3.1",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
